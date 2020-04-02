@@ -77,7 +77,7 @@ for episode in progress:
             break
     if (episode-1) % 100 ==0:
         agent.save()
-    if mscore >= solve_value:
+    if mscore100 >= solve_value:
         print(f"Environment solved in:  {episode+1} episodes.")
         break
 

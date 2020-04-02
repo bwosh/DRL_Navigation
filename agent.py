@@ -56,6 +56,7 @@ class Agent():
             if len(self.memory) > self.batch_size:
                 experiences = self.memory.sample()
                 self.learn(experiences, self.gamma)
+                
     def learn(self, experiences, gamma):
         states, actions, rewards, next_states, dones = experiences
 
@@ -73,12 +74,12 @@ class Agent():
         soft_update(self.qnetwork_local, self.qnetwork_target, self.tau)  
 
     def save(self):
-        torch.save(self.qnetwork_target.state_dict(),self.model_path)
-        torch.save(self.qnetwork_target.state_dict(),self.model_path.replace('.pth','2.pth'))
+        torch.save(self.qnetwork_local.state_dict(),self.model_path)
+        torch.save(self.qnetwork_target.state_dict(),self.model_path.replace('.pth','_target.pth'))
         print("Saved agent model.")
 
     def load(self):
         if( os.path.isfile(self.model_path)):
             self.qnetwork_local.load_state_dict(torch.load(self.model_path))
-            self.qnetwork_target.load_state_dict(torch.load(self.model_path))
+            self.qnetwork_target.load_state_dict(torch.load(self.model_path.replace('.pth','_target.pth')))
             print(f"Loaded agent model: {self.model_path}")
