@@ -50,7 +50,7 @@ With parameters described above the environment was solved in 2204 episodes.
 Final model can be found here: [model.pth](model.pth)
 
 # Play results
-After the network was trained 100 episodes of play were launched (using [model.pth](model.pth)) achieving average score of 14.7 points.  
+After the network was trained 100 episodes of play were launched (using [model.pth](model.pth)) achieving average score of 14.9 points.  
 
 ![Play score results](./assets/play_DQN.png)  
 (The plot was created using [this script](./report_preparation.ipynb))
