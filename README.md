@@ -35,4 +35,4 @@ python3 play.py
 ```
 
  # Details
-Implementation approach & details can be found in [report](./Report.md) file.
+Implementation approach & details and metrics can be found in [report](./Report.md) file.
