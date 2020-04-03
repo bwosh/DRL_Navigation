@@ -3,13 +3,36 @@ This project is a part of:
  [Deep Reinforcement Learning Nanodegree](https://www.udacity.com/course/deep-reinforcement-learning-nanodegree--nd893
  )
 
-# Requirements
-## Python packages
-torch, numpy, tqdm, unityagents
-## External resources
-### Banana app
-  (TODO)
+The project uses DQN algorithm to solve 'Banana' environment to maximize number of gathered yellow bananas and avoiding blue bananas.
 
- # TODO
-- add more description to readme
-- add config with banana path
+![banana app ](./assets/demo.gif)
+
+# Requirements
+Below you can find a list of requirements required to run train.py & play.py scripts
+## Resources
+- python 3.6
+- Banana app (this is delivered by Udacity Team)
+  - Linux: click here
+  - Mac OSX: click here
+  - Windows (32-bit): click here
+  - Windows (64-bit): click here
+
+## Python packages
+- torch 
+- numpy 
+- tqdm
+- unityagents
+
+# Usage
+## Training
+```bash
+python3 train.py
+```
+
+## Playing usign trained model
+```bash
+python3 play.py
+```
+
+ # Details
+Implementation approach & details can be found in [report](./Report.md) file.
