@@ -40,11 +40,12 @@ progress = tqdm(desc='Playing', total=max_moves)
 while True:
     action = agent.act(state_agg.to_input(), 0)    # select an action
     env_info = env.step(action)[brain_name]        # send the action to the environment
+    print(dir(env_info))
     next_state = env_info.vector_observations[0]   # get the next state
     reward = env_info.rewards[0]                   # get the reward
     done = env_info.local_done[0]                  # see if episode has finished
     score += reward                                # update the score
-
+    state = next_state 
     state_agg.push(next_state) 
 
     progress.update()
